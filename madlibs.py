@@ -26,8 +26,19 @@ class Madlib:
         selector = random.randint(0, len(self.stories)-1)
         return print(self.stories[selector])
 
+    #TO-DO: Make function that allows you to add stories. Below Doesn't work
+    def add_story(self):
+        print("Please input a story that follows the following format: \n\n \
+            'Playing football is so {self.adj}! it makes me so upset all the time because I love to {self.verb1}. Stay fit and {self.verb2} like you are {self.famous_person}!'\n \n \
+            Or \n \n \
+            can use the adjective, verbs and famous_person name you inputted previously in a way that makes sense.")
+        story = input("Type story here:\n")
+        self.stories.append(story)
+        return
 
 my_madlib = Madlib("hard","eat","fight","Jackie Chan")
 
 my_madlib.mad_lib()
+
+my_madlib.add_story()
 
